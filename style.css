@@ -1,0 +1,676 @@
+/* =========================================
+   SMART FACTORY DASHBOARD – CSS
+   Frontend-only demo
+========================================= */
+
+/* --------- GLOBAL RESET --------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* --------- BODY --------- */
+body {
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --------- HEADER --------- */
+header {
+    background: linear-gradient(90deg, #0f4c75, #3282b8);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* --------- MAIN CARD SECTIONS --------- */
+.card {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0f4c75;
+    border-left: 5px solid #3282b8;
+    padding-left: 10px;
+}
+
+/* --------- TABLE --------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+thead {
+    background-color: #3282b8;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* --------- PROCESS FLOW --------- */
+#processFlow {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#processFlow li {
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f4f7fb;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* --------- CHART CONTAINERS --------- */
+.chart-container {
+    margin: 20px 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* --------- RECOMMENDATIONS --------- */
+#recommendations {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#recommendations li {
+    margin-bottom: 8px;
+    background: #eef6ff;
+    padding: 10px;
+    border-left: 5px solid #3282b8;
+    border-radius: 5px;
+}
+
+/* --------- FOOTER --------- */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #0f4c75;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+/* --------- RESPONSIVE DESIGN --------- */
+/* =========================================
+   SMART FACTORY DASHBOARD – MODERN UI
+========================================= */
+
+/* ---------- GLOBAL RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- ROOT COLORS ---------- */
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --bg: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-light: #475569;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- BODY ---------- */
+body {
+    background: linear-gradient(120deg, #eef2ff, #f8fafc);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin-top: 6px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* ---------- CARD LAYOUT ---------- */
+.card {
+    background: var(--card-bg);
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 1150px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin-bottom: 18px;
+    font-size: 20px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+}
+
+.card h2::before {
+    content: "";
+    width: 6px;
+    height: 22px;
+    background: var(--primary);
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+thead {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: #ffffff;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #eef2ff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+/* ---------- PROCESS FLOW ---------- */
+#processFlow {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+#processFlow li {
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 2px #e5e7eb;
+    transition: all 0.25s ease;
+}
+
+#processFlow li:hover {
+    background: #eef2ff;
+    transform: scale(1.03);
+}
+
+/* ---------- CHARTS ---------- */
+.chart-container {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- RECOMMENDATIONS ---------- */
+#recommendations {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+#recommendations li {
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+#recommendations li::before {
+    content: "✔";
+    color: var(--success);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: #ffffff;
+    font-size: 13px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        margin: 15px;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}
+/* ---------- DASHBOARD LAYOUT ---------- */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #1e40af, #2563eb);
+    color: #ffffff;
+    padding: 25px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.content {
+    margin-left: 240px;
+    padding: 30px;
+    width: 100%;
+}
+
+/* ---------- PAGE SECTIONS ---------- */
+.page {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ===== DIGITAL TWIN UI ===== */
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--secondary);
+}
+
+/* GRID FOR TWIN CARDS */
+.twin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* TWIN CARD */
+.twin-card {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease;
+}
+
+.twin-card:hover {
+    transform: translateY(-6px);
+}
+
+.twin-card h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.twin-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+/* METRICS */
+.twin-metric {
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.twin-metric span {
+    font-weight: 600;
+}
+
+/* STATUS COLORS */
+.good {
+    color: #16a34a;
+}
+
+.warning {
+    color: #dc2626;
+}
+
+/* SIMULATION & SUMMARY */
+.twin-simulation,
+.twin-summary {
+    margin-top: 20px;
+}
+
+.twin-simulation ul,
+.twin-summary ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.twin-simulation li,
+.twin-summary li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+/* ===== ANOMALY DETECTION UI ===== */
+
+.anomaly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* ANOMALY CARD BASE */
+.anomaly-card {
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    background: #ffffff;
+    transition: transform 0.25s ease;
+}
+
+.anomaly-card:hover {
+    transform: translateY(-6px);
+}
+
+.anomaly-card h3 {
+    margin-bottom: 5px;
+}
+
+.anomaly-card p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+/* STATUS COLORS */
+.anomaly-card.normal {
+    border-left: 6px solid #16a34a;
+}
+
+.anomaly-card.warning {
+    border-left: 6px solid #f59e0b;
+}
+
+.anomaly-card.alert {
+    border-left: 6px solid #dc2626;
+}
+
+.anomaly-metric {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.anomaly-metric span {
+    font-weight: 600;
+}
+
+/* DETAILS SECTION */
+.anomaly-details ul,
+.anomaly-algo ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.anomaly-details li,
+.anomaly-algo li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+/* ===== PREDICTIVE INSIGHTS UI ===== */
+
+.predictive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.predictive-card {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease;
+}
+
+.predictive-card:hover {
+    transform: translateY(-6px);
+}
+
+.predictive-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.predictive-card ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.predictive-card li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* STATUS LABELS */
+.predictive-status {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.predictive-status.normal {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.predictive-status.warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.predictive-status.alert {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* SUMMARY & LOGIC */
+.predictive-summary ul,
+.predictive-logic ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.predictive-summary li,
+.predictive-logic li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+/* ===== INTELLIGENT CONTROL STRATEGY UI ===== */
+
+.control-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.control-card {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease;
+}
+
+.control-card:hover {
+    transform: translateY(-6px);
+}
+
+.control-card h3 {
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.control-card ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+.control-card li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* CONTROL STATUS */
+.control-status {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.control-status.active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.control-status.warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* ACTIONS & LOGIC */
+.control-actions ul,
+.control-logic ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.control-actions li,
+.control-logic li {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
