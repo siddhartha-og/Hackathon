@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Factory Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar">
+        <h2>Smart Factory</h2>
+        <ul>
+            <li onclick="showSection('overview')">Dashboard</li>
+            <li onclick="showSection('digitalTwin')">Digital Twins</li>
+            <li onclick="showSection('anomaly')">Anomaly Detection</li>
+            <li onclick="showSection('predictive')">Predictive Insights</li>
+        </ul>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="content">
+
+        <!-- ===== OVERVIEW / DASHBOARD ===== -->
+        <section id="overview" class="page active">
+
+            <header>
+                <h1>Smart Factory Analytics Dashboard</h1>
+                <p>Frontend Demo – Simulated Industrial Data</p>
+            </header>
+
+            <!-- ENERGY ANALYSIS -->
+            <section class="card">
+                <h2>Energy Balance Analysis</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Machine</th>
+                            <th>Energy Input (kWh)</th>
+                            <th>Useful Output (kWh)</th>
+                            <th>Efficiency (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="energyTable">
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- PROCESS FLOW -->
+            <section class="card">
+                <h2>Process Flow & Bottleneck Detection</h2>
+                <p><strong>Red stage</strong> indicates production bottleneck.</p>
+                <ul id="processFlow">
+                    <!-- Filled by JavaScript -->
+                </ul>
+            </section>
+
+            <!-- SYSTEM DYNAMICS -->
+            <section class="card">
+                <h2>System Dynamics</h2>
+
+                <div class="chart-container">
+                    <canvas id="productionChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="inventoryChart"></canvas>
+                </div>
+            </section>
+
+            <!-- RECOMMENDATIONS -->
+            <section class="card">
+                <h2>Optimization Recommendations</h2>
+                <ul id="recommendations">
+                    <!-- Filled by JavaScript -->
+                </ul>
+            </section>
+
+        </section>
+
+        <!-- ===== DIGITAL TWIN ===== -->
+        <!-- ===== DIGITAL TWIN SECTION ===== -->
+<section id="digitalTwin" class="page">
+
+    <h2 class="section-title">Digital Twin – Virtual Factory Model</h2>
+
+    <!-- MACHINE TWIN CARDS -->
+    <div class="twin-grid">
+
+        <div class="twin-card">
+            <h3>CNC Machine A</h3>
+            <p>Virtual Representation</p>
+            <div class="twin-metric">Energy: <span>1200 kWh</span></div>
+            <div class="twin-metric">Output: <span>900 units</span></div>
+            <div class="twin-metric">Efficiency: <span class="good">75%</span></div>
+            <div class="twin-metric">Temperature: <span>65 °C</span></div>
+        </div>
+
+        <div class="twin-card">
+            <h3>Assembly Line B</h3>
+            <p>Virtual Representation</p>
+            <div class="twin-metric">Energy: <span>980 kWh</span></div>
+            <div class="twin-metric">Output: <span>720 units</span></div>
+            <div class="twin-metric">Efficiency: <span class="warning">73%</span></div>
+            <div class="twin-metric">Utilization: <span>82%</span></div>
+        </div>
+
+        <div class="twin-card">
+            <h3>Painting Unit C</h3>
+            <p>Virtual Representation</p>
+            <div class="twin-metric">Energy: <span>650 kWh</span></div>
+            <div class="twin-metric">Output: <span>600 units</span></div>
+            <div class="twin-metric">Efficiency: <span class="good">92%</span></div>
+            <div class="twin-metric">Downtime: <span>5%</span></div>
+        </div>
+
+    </div>
+
+    <!-- WHAT-IF SIMULATION -->
+    <div class="twin-simulation card">
+        <h3>What-If Simulation</h3>
+        <p>
+            This digital twin allows testing changes virtually before applying
+            them to the physical factory system.
+        </p>
+
+        <ul>
+            <li>Increase production rate → Higher energy consumption</li>
+            <li>Reduce idle time → Improved efficiency</li>
+            <li>Maintenance scheduling → Reduced downtime</li>
+        </ul>
+    </div>
+
+    <!-- DIGITAL TWIN SUMMARY -->
+    <div class="twin-summary card">
+        <h3>Digital Twin Insights</h3>
+        <ul>
+            <li>Virtual models mirror real machine behavior</li>
+            <li>Energy and performance optimization tested safely</li>
+            <li>Supports predictive analytics and intelligent control</li>
+        </ul>
+    </div>
+
+</section>
+
+        <!-- ===== ANOMALY DETECTION ===== -->
+        <!-- ===== ANOMALY DETECTION SECTION ===== -->
+<section id="anomaly" class="page">
+
+    <h2 class="section-title">Anomaly Detection Algorithm</h2>
+
+    <!-- ANOMALY STATUS CARDS -->
+    <div class="anomaly-grid">
+
+        <div class="anomaly-card normal">
+            <h3>Machine A</h3>
+            <p>Status: Normal</p>
+            <div class="anomaly-metric">Energy Usage: <span>Normal</span></div>
+            <div class="anomaly-metric">Temperature: <span>65 °C</span></div>
+            <div class="anomaly-metric">Production Rate: <span>Stable</span></div>
+        </div>
+
+        <div class="anomaly-card alert">
+            <h3>Assembly Line B</h3>
+            <p>Status: Anomaly Detected</p>
+            <div class="anomaly-metric">Energy Spike: <span>+18%</span></div>
+            <div class="anomaly-metric">Cycle Time: <span>High</span></div>
+            <div class="anomaly-metric">Downtime Risk: <span>Medium</span></div>
+        </div>
+
+        <div class="anomaly-card warning">
+            <h3>Painting Unit C</h3>
+            <p>Status: Warning</p>
+            <div class="anomaly-metric">Temperature: <span>78 °C</span></div>
+            <div class="anomaly-metric">Efficiency Drop: <span>-9%</span></div>
+            <div class="anomaly-metric">Vibration Level: <span>Elevated</span></div>
+        </div>
+
+    </div>
+
+    <!-- ANOMALY DETAILS -->
+    <!-- ===== ANOMALY DETECTION SECTION ===== -->
+<section id="anomaly" class="page">
+
+    <h2 class="section-title">Anomaly Detection Algorithm</h2>
+
+    <!-- ANOMALY STATUS CARDS -->
+    <div class="anomaly-grid">
+
+        <div class="anomaly-card normal">
+            <h3>Machine A</h3>
+            <p>Status: Normal</p>
+            <div class="anomaly-metric">Energy Usage: <span>Normal</span></div>
+            <div class="anomaly-metric">Temperature: <span>65 °C</span></div>
+            <div class="anomaly-metric">Production Rate: <span>Stable</span></div>
+        </div>
+
+        <div class="anomaly-card alert">
+            <h3>Assembly Line B</h3>
+            <p>Status: Anomaly Detected</p>
+            <div class="anomaly-metric">Energy Spike: <span>+18%</span></div>
+            <div class="anomaly-metric">Cycle Time: <span>High</span></div>
+            <div class="anomaly-metric">Downtime Risk: <span>Medium</span></div>
+        </div>
+
+        <div class="anomaly-card warning">
+            <h3>Painting Unit C</h3>
+            <p>Status: Warning</p>
+            <div class="anomaly-metric">Temperature: <span>78 °C</span></div>
+            <div class="anomaly-metric">Efficiency Drop: <span>-9%</span></div>
+            <div class="anomaly-metric">Vibration Level: <span>Elevated</span></div>
+        </div>
+
+    </div>
+
+    <!-- ANOMALY DETAILS -->
+    <div class="card anomaly-details">
+        <h3>Detected Anomalies Summary</h3>
+        <ul>
+            <li>Sudden increase in energy consumption in Assembly Line B</li>
+            <li>Abnormal temperature rise in Painting Unit C</li>
+            <li>Efficiency degradation beyond acceptable threshold</li>
+        </ul>
+    </div>
+
+    <!-- ALGORITHM DESCRIPTION -->
+    <div class="card anomaly-algo">
+        <h3>Anomaly Detection Logic (Conceptual)</h3>
+        <p>
+            The anomaly detection algorithm continuously monitors operational
+            parameters and compares them with predefined normal operating ranges.
+            Any significant deviation is flagged as an anomaly.
+        </p>
+        <ul>
+            <li>Threshold-based monitoring</li>
+            <li>Trend deviation analysis</li>
+            <li>Sudden spike and drop detection</li>
+        </ul>
+    </div>
+
+</section>
+
+    <!-- ALGORITHM DESCRIPTION -->
+    <div class="card anomaly-algo">
+        <h3>Anomaly Detection Logic (Conceptual)</h3>
+        <p>
+            The anomaly detection algorithm continuously monitors operational
+            parameters and compares them with predefined normal operating ranges.
+            Any significant deviation is flagged as an anomaly.
+        </p>
+        <ul>
+            <li>Threshold-based monitoring</li>
+            <li>Trend deviation analysis</li>
+            <li>Sudden spike and drop detection</li>
+        </ul>
+    </div>
+
+</section>
+<!-- ===== PREDICTIVE INSIGHTS SECTION ===== -->
+<section id="predictive" class="page">
+
+    <h2 class="section-title">Predictive Insights & Forecasting</h2>
+
+    <!-- PREDICTIVE CARDS -->
+    <div class="predictive-grid">
+
+        <div class="predictive-card">
+            <h3>Machine Failure Prediction</h3>
+            <p class="predictive-status warning">Risk Level: Medium</p>
+            <ul>
+                <li>Estimated failure probability: 35%</li>
+                <li>Key factor: Rising temperature trend</li>
+                <li>Recommended action: Inspect bearings</li>
+            </ul>
+        </div>
+
+        <div class="predictive-card">
+            <h3>Maintenance Forecast</h3>
+            <p class="predictive-status alert">Action Required Soon</p>
+            <ul>
+                <li>Next maintenance window: 7 days</li>
+                <li>Expected downtime reduction: 18%</li>
+                <li>Maintenance type: Preventive</li>
+            </ul>
+        </div>
+
+        <div class="predictive-card">
+            <h3>Production Demand Forecast</h3>
+            <p class="predictive-status normal">Stable Trend</p>
+            <ul>
+                <li>Expected demand increase: 12%</li>
+                <li>Forecast horizon: Next 14 days</li>
+                <li>Suggested action: Increase capacity</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- INSIGHT SUMMARY -->
+    <div class="card predictive-summary">
+        <h3>Key Predictive Insights</h3>
+        <ul>
+            <li>Potential machine issues identified before failure</li>
+            <li>Optimized maintenance scheduling reduces downtime</li>
+            <li>Production planning improved using demand forecasting</li>
+        </ul>
+    </div>
+
+    <!-- PREDICTION LOGIC -->
+    <div class="card predictive-logic">
+        <h3>Predictive Analytics Logic (Conceptual)</h3>
+        <p>
+            Predictive insights are generated by analyzing historical trends,
+            detected anomalies, and system behavior patterns to forecast
+            future operational states.
+        </p>
+        <ul>
+            <li>Trend analysis on energy and performance data</li>
+            <li>Anomaly correlation with failure history</li>
+            <li>Time-series based forecasting</li>
+        </ul>
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+
+<!-- Main JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
